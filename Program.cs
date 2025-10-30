@@ -5,7 +5,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Entity[] entities = new Entity[5];
+        Monster[] entities = new Monster[5];
         string[] names = new string[5];
         Random numberGenerator = new Random();
 
@@ -13,24 +13,24 @@ class Program
 
         for (int i = 0; i < entities.Length; i++)
         {
-            Entity newEntity = new Entity(names[i], numberGenerator.Next(10) + 1);
-            entities[i] = newEntity;
+            Monster newMonster = new Monster(names[i], numberGenerator.Next(10) + 1);
+            entities[i] = newMonster;
         }
 
         Console.WriteLine("============================");
-        Console.WriteLine("=       Entity Stats       =");
+        Console.WriteLine("=       Monster Stats       =");
         Console.WriteLine("============================");
 
-        foreach (Entity e in entities)
+        foreach (Monster e in entities)
             e.DisplayStats();
     }
 
-    class Entity
+    class Monster
     {
         private string name;
         private int healthPoints;
 
-        public Entity(string name = "Unknown Entity", int healthPoints = 9999)
+        public Monster(string name = "Unknown Monster", int healthPoints = 9999)
         {
             this.name = name;
             this.healthPoints = healthPoints;
