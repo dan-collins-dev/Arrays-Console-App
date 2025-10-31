@@ -5,22 +5,22 @@ class Program
 {
     static void Main(string[] args)
     {
-        Monster[] entities = new Monster[5];
+        Monster[] monsters = new Monster[5];
         string[] names = ["Goblin", "Bat", "Slime", "Dragon", "Spoony Bard"];
         Random numberGenerator = new Random();
 
-        for (int i = 0; i < entities.Length; i++)
+        for (int i = 0; i < monsters.Length; i++)
         {
             Monster newMonster = new Monster(names[i], numberGenerator.Next(10) + 1);
-            entities[i] = newMonster;
+            monsters[i] = newMonster;
         }
 
         Console.WriteLine("============================");
         Console.WriteLine("=       Monster Stats       =");
         Console.WriteLine("============================");
 
-        foreach (Monster e in entities)
-            e.DisplayStats();
+        foreach (Monster m in monsters)
+            m.DisplayStats();
     }
 
     class Monster
