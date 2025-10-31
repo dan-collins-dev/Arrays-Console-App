@@ -6,10 +6,8 @@ class Program
     static void Main(string[] args)
     {
         Monster[] entities = new Monster[5];
-        string[] names = new string[5];
+        string[] names = ["Goblin", "Bat", "Slime", "Dragon", "Spoony Bard"];
         Random numberGenerator = new Random();
-
-        names = ["Goblin", "Bat", "Slime", "Dragon", "Spoony Bard"];
 
         for (int i = 0; i < entities.Length; i++)
         {
